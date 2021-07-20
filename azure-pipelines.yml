@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: Default
+pool: wlwu-agent
 
 steps:
 - task: Maven@3
