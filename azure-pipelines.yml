@@ -6,15 +6,15 @@
 trigger:
 - master
 
-pool: wlwu-agent
+pool:
+  vmImage: ubuntu-latest
 
 steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'Path'
-    jdkUserInputPath: '/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home'
+    javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
